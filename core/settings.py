@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'apps.product',
     'apps.mixin',
     'apps.shop',
+    'apps.abandoned',
 ]
 
 MIDDLEWARE = [

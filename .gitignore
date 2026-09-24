@@ -11,7 +11,6 @@ config/firebase_credentials.json
 *.pyc
 
 # Database files
-db.sqlite3  # Adjust for your database name
 
 # Static files (usually managed by collectstatic)
 static/
@@ -49,10 +48,10 @@ myenv/
 # Миграции (в git только __init__.py, файлы 0001_*.py не коммитим)
 **/migrations/*.py
 !**/migrations/__init__.py
+!apps/abandoned/migrations/0001_initial.py
 **/migrations/__pycache__/
 **/migrations/*.pyc
 
-db.sqlite3
 
 ### Python ###
 # Byte-compiled / optimized / DLL files

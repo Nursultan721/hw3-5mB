@@ -31,4 +31,5 @@ urlpatterns = [
     path('product/', include('apps.product.urls')),
     path('mixin/', include('apps.mixin.urls')),
     path('shop/', include('apps.shop.urls')),
+    path('abandoned/', include('apps.abandoned.urls')),
 ]

@@ -1,13 +1,17 @@
-from django.urls import path, include
-from .views import HumanViewsets
-from rest_framework.routers import DefaultRouter
+from django.urls import path
 
-router = DefaultRouter()
-router.register('human', HumanViewsets)
+from .views import (
+    ClientDetailView,
+    ClientListCreateView,
+    PostDetailView,
+    PostListCreateView,
+)
+
 
 urlpatterns = [
-    path('', include(router.urls))
-    # path('', MixinView.as_view(), name='mixin-list'),
-    # path('<int:pk>/', MixinDetailView.as_view(), name='mixin-detail')
+    path('posts/', PostListCreateView.as_view(), name='post-list'),
+    path('posts/<int:pk>/', PostDetailView.as_view(), name='post-detail'),
+    path('clients/', ClientListCreateView.as_view(), name='client-list'),
+    path('clients/<int:pk>/', ClientDetailView.as_view(), name='client-detail'),
 ]
 
